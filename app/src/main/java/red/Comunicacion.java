@@ -26,9 +26,7 @@ public class Comunicacion extends Thread {
 
     public Comunicacion() {
         try {
-            adress= InetAddress.getLocalHost();
-            String ad= adress.toString();
-            s = new Socket(InetAddress.getByName(ad), 5000);
+            s = new Socket("192.168.1.56", 5000);
             conectado = true;
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,6 +1,7 @@
 package com.example.carloshernando.agora;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -76,6 +77,8 @@ public class Login extends AppCompatActivity {
             if(s != null ){
                 if(s instanceof User){
                     User user= (User)s;
+
+                    startActivity(new Intent(context, Feed.class));
 
                 }else{
                    String r = (String)s;
