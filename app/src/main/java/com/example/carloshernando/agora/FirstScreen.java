@@ -1,5 +1,6 @@
 package com.example.carloshernando.agora;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,11 +16,15 @@ public class FirstScreen extends AppCompatActivity {
 
     public void onInicioSesion(View v) {
 
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+
 
     }
 
     public void onRegistro(View v) {
-
-
+        Intent intent = new Intent(this, Register.class);
+        startActivity(intent);
     }
+
 }
