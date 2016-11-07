@@ -72,7 +72,7 @@ public class Register extends AppCompatActivity {
                 String r = (String) o;
                 Toast.makeText(c, r, Toast.LENGTH_SHORT).show();
 
-                startActivity(new Intent(c, Register.class));
+                startActivity(new Intent(c, Login.class));
             } else {
                 Toast.makeText(c, "algun problema en la conexión, creo", Toast.LENGTH_SHORT).show();
             }
