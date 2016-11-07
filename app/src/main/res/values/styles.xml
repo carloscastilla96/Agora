@@ -3,14 +3,17 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorPrimary">#0c3934</item>
+        <item name="colorPrimaryDark">#0c3934</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
 
 
     <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/black_overlay</item>
+        <item name="android:background">#0c3934</item>
+
+
 
     </style>
 
