@@ -13,6 +13,10 @@
         <activity
             android:name=".Register"
             android:label="@string/title_activity_third"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Feed"
+            android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme"></activity>
     </application>
 
