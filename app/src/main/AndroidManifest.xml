@@ -9,26 +9,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Login" />
-        <activity android:name=".FirstScreen" />
+        <activity android:name=".FirstScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Register"
             android:label="@string/title_activity_third"
             android:theme="@style/AppTheme" />
 
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        <activity
-            android:name=".Feed"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme"></activity>
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
     </application>
 
 </manifest>
