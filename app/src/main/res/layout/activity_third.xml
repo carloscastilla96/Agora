@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     android:background="#f7ebed"
     android:orientation="horizontal"
-    tools:context=".SecondScreen">
+    tools:context=".Register">
 
     <Button
-        android:layout_width="200dp"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_gravity="bottom"
         android:layout_marginBottom="50dp"
@@ -21,13 +21,7 @@
         android:id="@+id/iniciarSesion">
 
     </Button>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="AGORA"
-        android:textSize="40dp"
-        android:
-        android:elevation="3dp"/>
+
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
