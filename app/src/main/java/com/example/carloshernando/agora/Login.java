@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class SecondScreen extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
 
     EditText username;

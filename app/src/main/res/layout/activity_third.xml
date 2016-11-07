@@ -22,6 +22,16 @@
 
     </Button>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:elevation="3dp"
+        android:gravity="right"
+        android:text="AGORA"
+        android:textColor="#000000"
+        android:textSize="40dp"
+        android:textStyle="italic" />
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -29,7 +39,7 @@
         android:layout_height="match_parent"
         android:background="#f7ebed"
         android:orientation="horizontal"
-        tools:context=".SecondScreen">
+        tools:context=".Login">
 
         <LinearLayout
             android:layout_width="90dp"
@@ -47,7 +57,7 @@
 
 
             <EditText
-                android:id="@+id/user"
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -55,24 +65,89 @@
                 android:background="#f7ebed"
                 android:gravity="left"
                 android:hapticFeedbackEnabled="true"
-                android:hint="USERNAME"
+                android:hint="Name"
+                android:imeOptions="actionSend"
+                android:inputType="textCapWords"
+                android:paddingRight="20dp"
+                android:textSize="20dp" />
+            <EditText
+                android:id="@+id/apellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="#f7ebed"
+                android:gravity="left"
+                android:hapticFeedbackEnabled="true"
+                android:hint="Last Name"
                 android:imeOptions="actionSend"
                 android:inputType="textCapWords"
                 android:paddingRight="20dp"
 
-                android:textSize="30dp" />
+                android:textSize="20dp" />
 
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="#f7ebed"
+                android:gravity="left"
+                android:hapticFeedbackEnabled="true"
+                android:hint="Username"
+                android:imeOptions="actionSend"
+                android:inputType="textCapWords"
+                android:paddingRight="20dp"
+
+                android:textSize="20dp" />
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
                 android:background="#f7ebed"
-                android:ems="10"
-                android:hint="user"
+                android:gravity="left"
+                android:hapticFeedbackEnabled="true"
+                android:hint="Password"
                 android:imeOptions="actionSend"
                 android:inputType="textPassword"
-                android:textSize="30dp" />
+                android:paddingRight="20dp"
+
+                android:textSize="20dp" />
+            <EditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="#f7ebed"
+                android:gravity="left"
+                android:hapticFeedbackEnabled="true"
+                android:hint="Confirm Password"
+                android:imeOptions="actionSend"
+                android:inputType="textPassword"
+                android:paddingRight="20dp"
+
+                android:textSize="20dp" />
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="#f7ebed"
+                android:gravity="left"
+                android:hapticFeedbackEnabled="true"
+                android:hint="E-Mail"
+                android:imeOptions="actionSend"
+                android:inputType="textCapWords"
+                android:paddingRight="20dp"
+
+                android:textSize="20dp" />
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>
