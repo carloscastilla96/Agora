@@ -9,20 +9,45 @@
     android:orientation="horizontal"
     tools:context="com.example.carloshernando.agora.FirstScreen">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_margin="40dp"
+
+        android:elevation="0.5dp">
     <Button
         android:id="@+id/iniciarSesion"
-        android:layout_width="130dp"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_gravity="bottom"
-        android:layout_marginBottom="50dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:background="#202021"
-        android:elevation="3dp"
         android:onClick="onInicioSesion"
         android:text="INICIAR SESION"
         android:textColor="#ffffff">
 
     </Button>
+
+        <Button
+            android:id="@+id/registro"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:background="#202021"
+
+            android:onClick="onRegistro"
+            android:text="REGISTRO"
+            android:textColor="#ffffff">
+
+        </Button>
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -124,21 +149,6 @@
 
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/registro"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="50dp"
-        android:layout_marginLeft="200dp"
-        android:background="#202021"
-        android:elevation="3dp"
-        android:onClick="onRegistro"
-        android:text="REGISTRO"
-        android:textColor="#ffffff">
-
-    </Button>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
