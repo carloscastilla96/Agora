@@ -4,17 +4,11 @@ import java.io.File;
 import java.io.Serializable;
 
 
-/**
- * Se encrga de contener la informaci�n relevante de cada usuario.
- *
- * @author Andres
- */
 public class NewUser implements Serializable {
     int userId;
     String name;
     String lastName;
     String userName;
-
     String password;
     String email;
 

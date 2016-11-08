@@ -11,8 +11,8 @@ public class Subject_Item implements Serializable {
 	private static final long serialVersionUID = 5L;
 
 	/**
-	 * los items contienen solo la informacion de cada Materia. los nombres de
-	 * las variables son lo sufientemente claros para saber que se esta almacenando
+	 * los items contienen solo la informaci�n de cada Materia. los nombres de
+	 * las variables son lo sufientemente claros para saber que se est� almacenando
 	 * 
 	 * @author Andres
 	 *

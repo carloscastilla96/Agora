@@ -7,15 +7,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 
-/**
- * los items contienen solo la informaci�n de cada publicaci�n. los nombres de
- * las variables son lo sufientemente claros para saber que se est� almacenando
- *
- * @author Andres
- */
+
 public class Publication_Item implements Serializable {
-    int id;
-    String tittle, catagorie, subCategorie, description;
+    int id, daysLeft;
+    String tittle, catagorie, subCategorie, description, city;
     String name, lastName;
     ArrayList<ProfessionalRequired> professionalsRequired;
     ArrayList<ProfessionalRequired> professionalsObtained;
@@ -90,6 +85,14 @@ public class Publication_Item implements Serializable {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public int getDaysLeft() {
+        return daysLeft;
     }
 
     public String getName() {

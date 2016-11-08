@@ -1,17 +1,8 @@
 package red;
 
-import java.io.File;
 import java.io.Serializable;
-import java.util.ArrayList;
-
-import items.Subject_Item;
 
 
-/**
- * Se encarga de almacenar la informaci�n del usuario que ha iniciado sesi�n.
- *
- * @author Andres
- */
 public class User implements Serializable {
     int userId;
     String name;

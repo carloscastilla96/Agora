@@ -2,13 +2,6 @@ package petitions;
 
 import java.io.Serializable;
 
-/**
- * Las peticiones contienen solo el id que identifica que objeto en especifico
- * desea el dispositivo movil.
- * 
- * @author Andres
- *
- */
 public class UserPetition implements Serializable{
 	String user;
 	String pass;
