@@ -53,7 +53,7 @@ public class Login extends AppCompatActivity {
 
         Context context;
         private Task(Context context) {
-            this.context = context.getApplicationContext();
+            this.context = context;
         }
 
         @Override
@@ -78,7 +78,7 @@ public class Login extends AppCompatActivity {
                 if(s instanceof User){
                     User user= (User)s;
 
-                    startActivity(new Intent(context, Feed.class));
+                    startActivity(new Intent(context, FirstScreen.class));
 
                 }else{
                    String r = (String)s;

@@ -8,13 +8,15 @@ public class User implements Serializable {
     String name;
     String lastName;
     String userName;
+    String password;
 
     private static final long serialVersionUID = 2L;
 
-    public User(String name, String lastName, String userName) {
+    public User(String name, String lastName, String userName, String password) {
         this.name = name;
         this.lastName = lastName;
         this.userName = userName;
+        this.password=password;
     }
 
     //------------------GETS!-----------------------------------------------
@@ -38,6 +40,10 @@ public class User implements Serializable {
     public String getUserName() {
         return userName;
     }
+
+    public String getPassword() {
+        return password;
+    }
     //----------------------------SETS--------------------------------------------
 
     public void setLastName(String lastName) {
@@ -54,5 +60,9 @@ public class User implements Serializable {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
