@@ -78,7 +78,7 @@ public class Login extends AppCompatActivity {
                 if(s instanceof User){
                     User user= (User)s;
 
-                    startActivity(new Intent(context, FirstScreen.class));
+                    startActivity(new Intent(context, Feed.class));
 
                 }else{
                    String r = (String)s;
