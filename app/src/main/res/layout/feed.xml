@@ -17,9 +17,14 @@
         android:layout_height="70dp"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
+        android:elevation="8dp"
         android:onClick="onAgregar"
         android:src="@drawable/pus_icon"
-        android:elevation="8dp"
         app:backgroundTint="#0c3934" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cardRecycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </android.support.design.widget.CoordinatorLayout>
