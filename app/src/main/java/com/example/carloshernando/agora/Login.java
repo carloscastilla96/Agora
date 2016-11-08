@@ -95,7 +95,7 @@ public class Login extends AppCompatActivity {
     protected class StartC extends AsyncTask<String, String, String> {
         protected String doInBackground(String... params) {
             c = Comunicacion.getInstance();
-            System.out.println("Se ha inicializado la conexion hija de puta");
+            System.out.println("Se ha inicializado la conexion");
             return null;
         }
     }

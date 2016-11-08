@@ -1,6 +1,7 @@
 package com.example.carloshernando.agora;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ public class FirstScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_screen);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(FirstScreen.this);
     }
 
 
