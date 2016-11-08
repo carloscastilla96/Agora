@@ -26,7 +26,7 @@ public class Comunicacion extends Thread {
 
     public Comunicacion() {
         try {
-            s = new Socket("192.168.1.56", 5000);
+            s = new Socket("172.30.164.79", 5000);
             conectado = true;
         } catch (IOException e) {
             e.printStackTrace();

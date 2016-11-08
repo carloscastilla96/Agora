@@ -40,10 +40,6 @@ public class User implements Serializable {
     public String getUserName() {
         return userName;
     }
-
-    public String getPassword() {
-        return password;
-    }
     //----------------------------SETS--------------------------------------------
 
     public void setLastName(String lastName) {
