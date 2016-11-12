@@ -10,24 +10,26 @@
     tools:context="com.example.carloshernando.agora.FirstScreen">
 
     <LinearLayout
+        android:id="@+id/buttons"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:layout_margin="40dp"
-        android:elevation="0.5dp">
-    <Button
-        android:id="@+id/iniciarSesion"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_gravity="bottom"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="#202021"
-        android:onClick="onInicioSesion"
-        android:text="INICIAR SESION"
-        android:textColor="#ffffff">
+        android:elevation="0.5dp"
+        android:gravity="center">
 
-    </Button>
+        <Button
+            android:id="@+id/iniciarSesion"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#202021"
+            android:onClick="onInicioSesion"
+            android:text="INICIAR SESION"
+            android:textColor="#ffffff">
+
+        </Button>
 
         <Button
             android:id="@+id/registro"
@@ -49,6 +51,7 @@
 
 
     <LinearLayout
+        android:id="@+id/principal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="30dp"
@@ -91,60 +94,61 @@
             android:textColor="#000000"
             android:textSize="15dp"
             android:textStyle="normal" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="35dp"
+            android:layout_marginLeft="75dp"
             android:layout_marginTop="40dp"
             android:gravity="left"
-            android:layout_marginLeft="75dp"
             android:text="Medicina."
             android:textColor="#000000"
-            android:textSize="25dp"
-            />
+            android:textSize="25dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:gravity="left"
             android:layout_marginLeft="75dp"
+            android:gravity="left"
             android:text="Ingenieria."
             android:textColor="#000000"
-            android:textSize="25dp"
-            />
+            android:textSize="25dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:gravity="left"
             android:layout_marginLeft="75dp"
+            android:gravity="left"
             android:text="Ciencias Sociales."
             android:textColor="#000000"
-            android:textSize="25dp"
-            />
+            android:textSize="25dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:gravity="left"
             android:layout_marginLeft="75dp"
+            android:gravity="left"
             android:text="Diseño."
             android:textColor="#000000"
-            android:textSize="25dp"
-            /> <TextView
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:gravity="left"
-        android:layout_marginLeft="75dp"
-        android:text="Arte."
-        android:textColor="#000000"
-        android:textSize="25dp"
-        /> <TextView
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:gravity="left"
-        android:layout_marginLeft="75dp"
-        android:text="Biología."
-        android:textColor="#000000"
-        android:textSize="25dp"
-        />
+            android:textSize="25dp" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="75dp"
+            android:gravity="left"
+            android:text="Arte."
+            android:textColor="#000000"
+            android:textSize="25dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="75dp"
+            android:gravity="left"
+            android:text="Biología."
+            android:textColor="#000000"
+            android:textSize="25dp" />
 
 
     </LinearLayout>

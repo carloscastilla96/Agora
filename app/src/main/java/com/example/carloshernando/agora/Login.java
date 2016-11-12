@@ -20,6 +20,7 @@ public class Login extends AppCompatActivity {
     EditText username;
     EditText tpassword;
     private Comunicacion c;
+    Button boton;
 
 
     @Override
@@ -31,6 +32,8 @@ public class Login extends AppCompatActivity {
         username= (EditText) findViewById(R.id.user);
         tpassword= (EditText) findViewById(R.id.password);
         new StartC().execute();
+        boton = (Button) findViewById(R.id.iniciarSesion);
+        boton.bringToFront();
     }
 
 
