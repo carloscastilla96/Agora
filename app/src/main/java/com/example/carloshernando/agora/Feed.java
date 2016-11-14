@@ -46,7 +46,6 @@ public class Feed extends AppCompatActivity {
         cardAdapter = new CardAdapter(tarjetas);
         inicializar();
         recyclerView.setAdapter(cardAdapter);
-
         traerPublicaciones();
 
     }

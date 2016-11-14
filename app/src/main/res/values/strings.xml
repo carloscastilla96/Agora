@@ -7,5 +7,6 @@
     <string name="title_activity_third">ThirdActivity</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_publication">Publication</string>
+    <string name="pick_color">Comentar</string>
 
 </resources>

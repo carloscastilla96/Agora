@@ -16,7 +16,7 @@
         android:background="#202021"
         android:elevation="0.5dp"
         android:onClick="onInicioSesion"
-        android:text="INICIAR SESION"
+        android:text="REGISTRARME"
         android:textColor="#ffffff"
         android:id="@+id/iniciarSesion">
 

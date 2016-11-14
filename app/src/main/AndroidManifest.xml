@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.carloshernando.agora">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,26 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".Login" />
-        <activity android:name=".FirstScreen">
+        <activity android:name=".FirstScreen"></activity>
+        <activity android:name=".Register" />
+        <activity android:name=".Feed" />
+        <activity android:name=".Publication">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity
-        android:name=".Register"
-        android:label="@string/title_activity_third"
-        android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".Feed"
-            android:label="@string/app_name"
-            />
-
-
+        <activity android:name=".Publish"></activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

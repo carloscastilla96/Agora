@@ -9,6 +9,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -20,18 +21,20 @@ public class Register extends AppCompatActivity {
 
 
     EditText name, lastName, username, password, cPassword, email;
+    Button registrarme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
         name = (EditText) findViewById(R.id.name);
         lastName = (EditText) findViewById(R.id.apellido);
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
         cPassword = (EditText) findViewById(R.id.confirmPassword);
         email = (EditText) findViewById(R.id.email);
+        registrarme = (Button) findViewById(R.id.iniciarSesion);
+        registrarme.bringToFront();
 
     }
 
@@ -72,7 +75,7 @@ public class Register extends AppCompatActivity {
                 String r = (String) o;
                 Toast.makeText(c, r, Toast.LENGTH_SHORT).show();
 
-                startActivity(new Intent(c, Login.class));
+                startActivity(new Intent(c, FirstScreen.class));
             } else {
                 Toast.makeText(c, "algun problema en la conexión, creo", Toast.LENGTH_SHORT).show();
             }

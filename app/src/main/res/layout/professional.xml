@@ -3,50 +3,56 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#f7ebed">
+    android:orientation="vertical">
 
-    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-
-        <LinearLayout
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:src="@drawable/dot_grey"
+            android:layout_marginTop="6dp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingLeft="15dp"
             android:paddingRight="15dp">
 
+
             <TextView
+                android:id="@+id/professionalType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:id="@+id/professionalType"
+                android:layout_margin="3dp"
+                android:text="Senior Filmaker "
                 android:textColor="#000000"
-                android:textStyle="bold"
-                android:text="Senior Filmaker " />
+                android:textStyle="bold" />
 
             <TextView
-
+                android:id="@+id/professionalDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:id="@+id/professionalDescription"
                 android:text="This intimate, joyful, haunting portrait of playwright Maria Irene Fornes shows art and friendship enduring in the face of forgetting."
                 android:textColor="#000000"
-
                 android:textStyle="normal" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:background="#0c3934"
-                android:text="Aplicar"
-                android:textColor="#ffffff" />
 
         </LinearLayout>
 
-    </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/aplicar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#0c3934"
+        android:text="Aplicar"
+        android:layout_margin="10dp"
+        android:textColor="#ffffff" />
 </LinearLayout>
