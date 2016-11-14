@@ -28,7 +28,8 @@
                 android:text="Agora"
                 android:textColor="#ffffffff"
                 android:textSize="30dp"
-                android:textStyle="italic" />
+                android:textStyle="italic"
+                android:id="@+id/agora" />
 
 
         </LinearLayout>
@@ -39,14 +40,14 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/image"
+                android:id="@+id/pimage"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:adjustViewBounds="true"
                 android:clickable="false"
                 android:maxHeight="@dimen/activity_vertical_margin"
                 android:scaleType="centerCrop"
-                android:src="@drawable/agorapdf"></ImageView>
+                android:src="@drawable/agora_pdf"></ImageView>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -85,18 +86,18 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/title"
+                    android:id="@+id/AAAAAA"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
                     android:layout_marginBottom="1dp"
                     android:paddingLeft="5dp"
-                    android:text="The rest i make up: Maria Irene Fornes "
+                    android:text="ddddddddd"
                     android:textColor="#0c3934"
                     android:textSize="18dp" />
 
                 <TextView
-                    android:id="@+id/author"
+                    android:id="@+id/Pauthor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
@@ -108,7 +109,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/description"
+                    android:id="@+id/Pdescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -117,6 +118,7 @@
                     android:text="This intimate, joyful, haunting portrait of playwright Maria Irene Fornes shows art and friendship enduring in the face of forgetting. "
                     android:textColor="#000000"
                     android:textSize="14dp" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -139,7 +141,7 @@
                             android:src="@drawable/location_icon" />
 
                         <TextView
-                            android:id="@+id/city"
+                            android:id="@+id/Pcity"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="2dp"
@@ -164,7 +166,7 @@
                             android:src="@drawable/world_icon" />
 
                         <TextView
-                            android:id="@+id/workType"
+                            android:id="@+id/PworkType"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="2dp"
@@ -225,7 +227,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/enrolledProfessionals"
+                        android:id="@+id/PenrolledProfessionals"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="2dp"
@@ -242,7 +244,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/neededProfessionals"
+                        android:id="@+id/PneededProfessionals"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="2dp"
@@ -325,7 +327,7 @@
                             android:src="@drawable/dot_black" />
 
                         <TextView
-                            android:id="@+id/phone"
+                            android:id="@+id/Pphone"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
@@ -346,7 +348,7 @@
                             android:src="@drawable/dot_black" />
 
                         <TextView
-                            android:id="@+id/email"
+                            android:id="@+id/Pemail"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
@@ -367,7 +369,7 @@
 
                         <TextView
 
-                            android:id="@+id/adress"
+                            android:id="@+id/Padress"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
@@ -387,7 +389,7 @@
                             android:src="@drawable/dot_black" />
 
                         <TextView
-                            android:id="@+id/website"
+                            android:id="@+id/Pwebsite"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"

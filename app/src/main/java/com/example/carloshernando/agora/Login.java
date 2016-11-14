@@ -16,18 +16,15 @@ import red.User;
 
 public class Login extends AppCompatActivity {
 
-
     EditText username;
     EditText tpassword;
     private Comunicacion c;
     Button boton;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         username= (EditText) findViewById(R.id.user);
         tpassword= (EditText) findViewById(R.id.password);
@@ -80,7 +77,7 @@ public class Login extends AppCompatActivity {
             if(s != null ){
                 if(s instanceof User){
                     User user= (User)s;
-
+                    DatosSesion.setUser(user);
                     startActivity(new Intent(context, Feed.class));
 
                 }else{

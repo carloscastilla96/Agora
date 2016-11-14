@@ -19,6 +19,10 @@ import android.widget.TextView;
 import android.support.v7.widget.CardView;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import items.Publication_Item;
@@ -29,7 +33,6 @@ import red.User;
 
 
 public class Feed extends AppCompatActivity {
-
     private RecyclerView recyclerView;
     private CardAdapter cardAdapter;
     private CardView cardView;
@@ -43,15 +46,17 @@ public class Feed extends AppCompatActivity {
         LinearLayoutManager llm = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(llm);
         recyclerView.setHasFixedSize(true);
-        cardAdapter = new CardAdapter(tarjetas);
-        inicializar();
+        cardAdapter = new CardAdapter(tarjetas,this);
+    //    inicializar();
         recyclerView.setAdapter(cardAdapter);
         traerPublicaciones();
+    }
 
+    public void onAgregar(View view){
+        startActivity(new Intent(this, Publish.class));
     }
 
     public void traerPublicaciones() {
-
          new Task(this, tarjetas).execute();
     }
 
@@ -59,7 +64,6 @@ public class Feed extends AppCompatActivity {
         tarjetas.add(new Publication_Item(0, "carlos", "castilla", "Mascara de los secretos", "arte", "documental", "lorem ipsumo dolom sit amen"));
         tarjetas.add(new Publication_Item(1, "carlos", "castilla", "Mascara de los secretos", "arte", "documental", "lorem ipsumo dolom sit amen"));
     }
-
 
     protected class Task extends AsyncTask<String, String, ArrayList<Publication_Item>> {
 
@@ -71,34 +75,53 @@ public class Feed extends AppCompatActivity {
             this.tarjetas = tarjetas;
         }
 
+
         @Override
         protected ArrayList<Publication_Item> doInBackground(String... params) {
-
             // creo una petición de inicio usuario
             PublicationPetition uP = new PublicationPetition("");
             Comunicacion.getInstance().enviar(uP);
 
             while (true) {
-
                 Object res = Comunicacion.getInstance().recibir();
-
                 if (res instanceof Publication_Item) {
-                    tarjetas.add((Publication_Item) res);
-                    System.err.println("as.dkvjbabsjvakjsbdvkajsbd.vabjsdv");
+                    Publication_Item p= (Publication_Item) res;
+                    try {
+                        guardarArchivo(p.getNombreImagen(),p.getBytesImagen());
+                        p.setBytesImagen(null);
+                    } catch (IOException e) {
+                        System.err.println("problema guardando imagen");
+                        e.printStackTrace();
+                    }
+
+                    tarjetas.add(p);
+
+
+
 
                 } else {
                     return tarjetas;
-
-
                 }
             }
         }
 
         @Override
         protected void onPostExecute(ArrayList<Publication_Item> s) {
-            s.add(new Publication_Item(0, "carlos", "castilla", "Mascara de los secretos", "arte", "documental", "lorem ipsumo dolom sit amen"));
-            cardAdapter = new CardAdapter(s);
+           cardAdapter = new CardAdapter(s,context);
             recyclerView.setAdapter(cardAdapter);
+        }
+    }
+
+    private void guardarArchivo(String nombre, byte[] buf) throws IOException {
+        try {
+            File archivo = new File("dataCliente/" + nombre);
+            archivo.createNewFile();
+            FileOutputStream salida = new FileOutputStream(archivo);
+            salida.write(buf);
+            salida.flush();
+            salida.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
     }
 }

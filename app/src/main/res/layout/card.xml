@@ -15,7 +15,6 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="7dp"
         android:clickable="true"
-        android:onClick="onCard"
         android:topLeftRadius="7dp"
         android:topRightRadius="7dp">
 
@@ -33,7 +32,7 @@
                 android:clickable="false"
                 android:maxHeight="@dimen/activity_vertical_margin"
                 android:scaleType="centerCrop"
-                android:src="@drawable/agorapdf"></ImageView>
+                android:src="@drawable/agora_pdf"></ImageView>
 
             <LinearLayout
                 android:layout_width="wrap_content"

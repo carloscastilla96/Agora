@@ -8,14 +8,14 @@ import java.util.ArrayList;
  * los items contienen solo la informaci�n de cada publicaci�n. los nombres de
  * las variables son lo sufientemente claros para saber que se est� almacenando
  *
- * @author Andres
+ * @author
  */
 
 public class Comment_Item implements Serializable {
     private String commentId;
     private String content;
     private String nameUser;
-    private double publicationID;
+    private int publicationID;
     private static final long serialVersionUID = 10L;
     int timePublication;
     // estos guardaron los archivos que se agregan al comentario, en caso de que
@@ -23,9 +23,10 @@ public class Comment_Item implements Serializable {
     ArrayList<File> files;
     int thanks;
 
-    public Comment_Item(String nameUser, String content) {
+    public Comment_Item(int publicationID, String nameUser, String content) {
         this.nameUser = nameUser;
         this.content = content;
+        this.publicationID= publicationID;
 
     }
 
@@ -61,11 +62,11 @@ public class Comment_Item implements Serializable {
         this.commentId = commentId;
     }
 
-    public double getPublicationID() {
+    public int getPublicationID() {
         return publicationID;
     }
 
-    public void setPublicationID(double publicationID) {
+    public void setPublicationID(int publicationID) {
         this.publicationID = publicationID;
     }
 

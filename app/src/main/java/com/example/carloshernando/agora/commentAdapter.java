@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import items.Comment_Item;
 
 
-public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHolderComment> {
+class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHolderComment> {
 
     //el RecyclerView.Viewholer, permite hacer la conexion entre los elementos del xml y el adaptor a través de la instacia View
     public class ViewHolderComment extends RecyclerView.ViewHolder {
@@ -22,8 +22,6 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
             super(itemView);
             usuario = (TextView) itemView.findViewById(R.id.name);
             texto = (TextView) itemView.findViewById(R.id.comment);
-
-
         }
     }
 

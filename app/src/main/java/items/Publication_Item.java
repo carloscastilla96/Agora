@@ -7,14 +7,22 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 
+/**
+ * los items contienen solo la informaci�n de cada publicaci�n. los nombres de
+ * las variables son lo sufientemente claros para saber que se est� almacenando
+ *
+ */
 
 public class Publication_Item implements Serializable {
-    int id, daysLeft;
+    int id;
     String tittle, catagorie, subCategorie, description, city;
     String name, lastName;
     ArrayList<ProfessionalRequired> professionalsRequired;
     ArrayList<ProfessionalRequired> professionalsObtained;
     String address, number, email, webAddres;
+    byte[] bytesImagen= null;
+    String nombreImagen= null;
+
 
     private static final long serialVersionUID = 4L;
 
@@ -28,6 +36,21 @@ public class Publication_Item implements Serializable {
         this.description = description;
     }
 
+    public void setBytesImagen(byte[] bytesImagen) {
+        this.bytesImagen = bytesImagen;
+    }
+
+    public byte[] getBytesImagen() {
+        return bytesImagen;
+    }
+
+    public String getNombreImagen() {
+        return nombreImagen;
+    }
+
+    public void setNombreImagen(String nombreImagen) {
+        this.nombreImagen = nombreImagen;
+    }
 
     public void needed(ArrayList<ProfessionalRequired> professionalRequired, ArrayList<ProfessionalRequired> professionalsObtained, String address, String number, String email, String webAddres) {
         this.professionalsObtained = professionalsObtained;
@@ -87,19 +110,19 @@ public class Publication_Item implements Serializable {
         return lastName;
     }
 
-    public String getCity() {
-        return city;
-    }
-
-    public int getDaysLeft() {
-        return daysLeft;
-    }
-
     public String getName() {
         return name;
     }
 
     public int getId() {
         return id;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }
