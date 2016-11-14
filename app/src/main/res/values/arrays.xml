@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="colors_array" />
+    <string-array name="fields_array">
+        <item>Medicina</item>
+        <item>Ingenieria</item>
+        <item>Ciencias Sociales</item>
+        <item>Arte</item>
+        <item>Diseno</item>
+        <item>Biologia</item>
 
+    </string-array>
 </resources>
