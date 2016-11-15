@@ -63,7 +63,7 @@
             <LinearLayout
                 android:id="@+id/image"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:orientation="vertical">
 
@@ -71,6 +71,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
                     android:fontFamily="monospace"
                     android:onClick="onGaleria"
                     android:text="+"
@@ -81,7 +82,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
                     android:fontFamily="monospace"
                     android:text="Agregue una foto para que los dems puedan identificar su proyecto"
                     android:textAlignment="center"
@@ -90,11 +93,11 @@
 
             </LinearLayout>
 
-            <View
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_gravity="center_horizontal"
-                android:background="@android:color/darker_gray" />
+                android:layout_height="5dp"
+                android:layerType="software"
+                android:src="@drawable/dotted" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -112,96 +115,127 @@
                     android:textColor="#0c3934"
                     android:textColorHint="#0c3934"
                     android:textSize="30dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold|italic" />
 
 
                 <EditText
                     android:id="@+id/description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
                     android:hint="De una descripicion de su proyecto en menos de 140 caracteres"
+                    android:textAlignment="center"
                     android:textColor="#0c3934"
-                    android:textColorHint="#0c3934"
+                    android:textColorHint="#777777"
                     android:textSize="15dp"
                     android:textStyle="italic" />
 
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="11dp"
+                        android:layout_width="15dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="1dp"
                         android:src="@drawable/location_icon" />
 
-                    <TextView
-                        android:id="@+id/city"
-                        android:layout_width="wrap_content"
+                    <EditText
+                        android:id="@+id/adress"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="2dp"
-                        android:text="New York, NY"
-                        android:textColor="#000000"
-                        android:textStyle="bold" />
+                        android:gravity="center"
+                        android:hint="Ubicacion"
+                        android:textColor="#0c3934"
+                        android:textColorHint="#0c3934"
+                        android:textStyle="italic" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="11dp"
+                    <CheckBox
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="1dp"
-                        android:src="@drawable/world_icon" />
+                        android:layout_margin="2dp"
+                        android:textColorHighlight="#0c3934"
+                        android:textColorLink="#0c3934" />
 
                     <TextView
                         android:id="@+id/workType"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="2dp"
-                        android:text="No Presencial"
+                        android:text="Requiere Trabajo Presencial"
+                        android:textColor="#0c3934"
+                        android:textStyle="italic|bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="3dp"
+                        android:src="@drawable/upload_icon" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="serif"
+                        android:text="Campaña"
                         android:textColor="#000000"
                         android:textStyle="bold" />
 
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="50dp"
-                        android:background="#2C625C"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:id="@+id/daysleft"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:text="32"
-                            android:textColor="#ffffff"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:text="Dias Mas"
-                            android:textColor="#ffffff"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
                 </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@android:color/darker_gray" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:text="Sube un archivo PDF explicando la informacion de tu campaña en donde se explique todo a fondo."
+                    android:textColor="#0c3934" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#0c3934"
+                    android:onClick="onUploadDocument"
+                    android:text="SUBIR ARCHIVO" />
+
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -222,33 +256,59 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:fontFamily="serif"
                         android:text="Profesionales Requeridos"
                         android:textColor="#000000"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/enrolledProfessionals"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="2dp"
-                        android:text="2"
-                        android:textColor="#000000"
-                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@android:color/darker_gray" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/profesionalsRecyclerPub"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"></android.support.v7.widget.RecyclerView>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:onClick="onAddProfessional"
+                    android:src="@drawable/addprofessional_icon" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/date_icon" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="2dp"
-                        android:text="/"
-                        android:textColor="#000000"
-                        android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/neededProfessionals"
+                        android:id="@+id/date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="2dp"
-                        android:text="2"
+                        android:layout_margin="5dp"
+                        android:text="Plazo Maximo de Reclutamiento"
                         android:textColor="#000000"
                         android:textStyle="bold" />
 
@@ -262,15 +322,62 @@
                     android:layout_marginRight="20dp"
                     android:background="@android:color/darker_gray" />
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/profesionalsRecycler"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="10dp" />
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp">
 
+                    <TextView
+                        android:id="@+id/days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DD"
+                        android:textColor="#0c3934"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textColor="#0c3934"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MM"
+                        android:textColor="#0c3934"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textColor="#0c3934"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="YY"
+                        android:textColor="#0c3934"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+
+                    android:background="#0c3934"
+                    android:onClick="onFecha"
+                    android:text="FIJAR FECHA" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -307,16 +414,18 @@
                     android:layout_marginRight="20dp"
                     android:background="@android:color/darker_gray" />
 
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
                     android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -326,20 +435,21 @@
                             android:layout_marginTop="8dp"
                             android:src="@drawable/dot_black" />
 
-                        <TextView
+                        <EditText
                             android:id="@+id/phone"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
-                            android:text="+57 3216223606" />
+                            android:hint="Numero de telefono" />
 
                     </LinearLayout>
 
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:weightSum="1">
 
                         <ImageView
                             android:layout_width="8dp"
@@ -347,17 +457,18 @@
                             android:layout_marginTop="8dp"
                             android:src="@drawable/dot_black" />
 
-                        <TextView
+                        <EditText
                             android:id="@+id/email"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
-                            android:text="+m.merman@gmail.com" />
+                            android:layout_weight="25.54"
+                            android:hint="E-Mail" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -367,18 +478,18 @@
                             android:layout_marginTop="8dp"
                             android:src="@drawable/dot_black" />
 
-                        <TextView
+                        <EditText
 
                             android:id="@+id/adress"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
-                            android:text="209 W 42nd St, New York, NY" />
+                            android:hint="Adress" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -388,26 +499,27 @@
                             android:layout_marginTop="8dp"
                             android:src="@drawable/dot_black" />
 
-                        <TextView
+                        <EditText
                             android:id="@+id/website"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
-                            android:text="therestimakeupmovie.com" />
+                            android:hint="Website" />
 
                     </LinearLayout>
 
 
                 </LinearLayout>
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_margin="10dp"
-                    android:background="#0c3934"
-                    android:text="VER DETALLES"
-                    android:textColor="#ffffff" />
+
             </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#0c3934"
+                android:text="PUBLICAR PROYECTO"
+                android:textColor="#ffffff" />
         </LinearLayout>
 
 

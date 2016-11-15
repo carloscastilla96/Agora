@@ -6,13 +6,21 @@
         <item name="colorPrimary">#0c3934</item>
         <item name="colorPrimaryDark">#0c3934</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorSecondary">#0c3934</item>
+        <item name="android:textColorHint">#0c3934</item>
 
+    </style>
+
+    <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">#0c3934</item>
+        <item name="android:textColorSecondary">#0c3934</item>
+        <item name="android:textColorHint">#0c3934</item>
+        <item name="android:textColorHintInverse">#0c3934</item>
     </style>
 
 
     <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
         <item name="android:background">#0c3934</item>
-
 
 
     </style>
