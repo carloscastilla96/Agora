@@ -197,7 +197,7 @@ public class Publication extends AppCompatActivity {
 
             commentAdapter = new CommentAdapter(comment_items);
             comments.setAdapter(commentAdapter);
-
         }
+
     }
 }
